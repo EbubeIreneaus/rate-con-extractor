@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-
+  "buildCommand": "uv sync",
   "routes": [
     { "src": "/(.*)", "dest": "api/index.py" }
   ]

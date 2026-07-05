@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Rate Confirmation Extractor</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Rate Confirmation Extractor</h1>
+            <p>Upload your document and view the extracted shipment details.</p>
+        </div>
+
+        <div class="upload-section">
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <label for="file" class="file-label">
+                    <div class="file-drop-area" id="file-drop-area">
+                        <span class="file-msg" id="file-label-text">Drag & Drop your file here or click to select</span>
+                    </div>
+                </label>
+                <input type="file" name="file" id="file" accept=".pdf,.doc,.docx" required>
+                <button type="submit">Upload</button>
+            </form>
+        </div>
+
+        <div class="response-container" aria-live="polite">
+            <div class="response-card">
+                <h3>Load Information</h3>
+                <div class="load-info"></div>
+            </div>
+            <div class="response-card">
+                <h3>Pickup Information</h3>
+                <div class="pickup-info"></div>
+            </div>
+            <div class="response-card">
+                <h3>Delivery Information</h3>
+                <div class="delivery-info"></div>
+            </div>
+            <div class="response-card">
+                <h3>Rate Information</h3>
+                <div class="rate-info"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

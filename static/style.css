@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #1f2937;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.header {
+  text-align: center;
+}
+
+.header h1 {
+  margin-bottom: 0.4rem;
+  font-size: 2rem;
+}
+
+.header p {
+  margin: 0;
+  color: #4b5563;
+}
+
+.upload-section {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.file-label {
+  width: 100%;
+}
+
+.file-drop-area {
+  width: 100%;
+  min-height: 130px;
+  border: 2px dashed #9aa8bd;
+  border-radius: 12px;
+  background: #f8fafc;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.file-drop-area.drag-over {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.file-msg {
+  font-weight: 600;
+  color: #374151;
+}
+
+button[type="submit"] {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 0.8rem 1.25rem;
+  cursor: pointer;
+  min-width: 180px;
+}
+
+button[type="submit"]:disabled {
+  opacity: 0.7;
+  cursor: progress;
+}
+
+.response-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.response-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.response-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: #1d4ed8;
+}
+
+.load-info,
+.pickup-info,
+.delivery-info,
+.rate-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.response-item-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.45rem;
+}
+
+.item-key {
+  font-weight: 600;
+  color: #111827;
+  text-transform: capitalize;
+}
+
+.item-val {
+  color: #4b5563;
+  text-align: right;
+}
+
+@media (max-width: 760px) {
+  .response-container {
+    grid-template-columns: 1fr;
+  }
+
+  .response-item-cont {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .item-val {
+    text-align: left;
+  }
+}

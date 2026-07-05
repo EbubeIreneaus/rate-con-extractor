@@ -9,6 +9,7 @@ dependencies = [
     "google-genai>=2.10.0",
     "mangum>=0.21.0",
     "pydantic-settings>=2.14.2",
+    "pymupdf>=1.28.0",
     "pymupdf-layout>=1.28.0",
     "pymupdf4llm>=1.28.0",
     "python-multipart>=0.0.32",

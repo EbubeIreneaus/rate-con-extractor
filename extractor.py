@@ -1,5 +1,6 @@
 import pymupdf4llm
 import pymupdf
+import pymupdf_layout
 from google import genai
 from model import RateConfirmation
 from settings import setting
